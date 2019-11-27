@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './Page1.css';
 
 class Page1 extends Component {
@@ -8,7 +7,7 @@ class Page1 extends Component {
       <div>
         <h1>Welcome To React Tutorial</h1>
       <h4>(A JavaScript library for building user interfaces)</h4>
-      <img src="https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png"></img>
+      <img src="https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png" alt="React Logo"></img>
 
       <h3>What is React?</h3>
       <span>React is a JavaScript library for building user interfaces. React was first released in 2013 and is maintained
@@ -57,7 +56,7 @@ class Page1 extends Component {
       <div>
         <h1>Welcome To Express Tutorial</h1>
         <h4>(Fast, unopinionated, minimalist web framework for Node.js)</h4>
-      <img src="https://buttercms.com/static/images/tech_banners/ExpressJS.png"></img>
+      <img src="https://buttercms.com/static/images/tech_banners/ExpressJS.png" alt="Express Logo"></img>
         <h3>What is Express?</h3>
         <span>Express 3.x is a light-weight web application framework to help organize your web application into
            an MVC architecture on the server side. The primary use of Express is to provide server-side logic for

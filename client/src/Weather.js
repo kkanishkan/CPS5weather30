@@ -5,7 +5,7 @@ class Weather extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            weatherJson : []
+            weatherJson : {}
         }
     }
 
@@ -28,17 +28,24 @@ class Weather extends Component {
                 <h1>Weather Result</h1>
                 {/* Checking is json is null or not */}
                 <div>
+                    <form method="POST" action="/submit-city">
+                        <label>
+                            City:    
+                            <input type="text" name="city"/>
+                        </label>
+                        <input type="submit" value="Submit"/>
+                    </form>
                     <p>Current Temperature: </p>
-                    {weatherInfo[0]}
+                    {weatherInfo.temperature}
                     <br></br>
                     <p>Day Low: </p>
-                    {weatherInfo[1]}
+                    {weatherInfo.minTemp}
                     <br></br>
                     <p>Day High: </p>
-                    {weatherInfo[2]}
+                    {weatherInfo.maxTemp}
                     <br></br>
                     <p>Conditions: </p>
-                    {weatherInfo[3]}
+                    {weatherInfo.description}
                 </div>
             </div>
         )
