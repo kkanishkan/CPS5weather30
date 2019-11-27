@@ -21,14 +21,15 @@ app.get('/api/getList', (req,res) => {
 });
 
 // Test openweather api endpoint
-app.post('/api/weather', (req,res) => {
+app.get('/api/weather', (req,res) => {
     var city = 'Toronto';
     var url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=9367d971696fc5955624feea1eaf11d7`;
     request(url, function(error,response,body) {
-        console.log("Sent json");
-        let weather = JSON.parse(body);
-        res.render(weather);
-        // res.json(JSON.stringify(JSON.parse(body)));
+        //body has the json as a string
+        // react doesn't seem to be able to handle the json well, shows properly when sent a string though
+        let weatherJson = JSON.parse(body);
+        let weatherInfo = [weatherJson.main.temp, weatherJson.main.temp_min, weatherJson.main.temp_max, weatherJson.weather[0].description];
+        res.send(weatherInfo);
     });
 });
 
