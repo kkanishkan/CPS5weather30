@@ -29,7 +29,20 @@ class Weather extends Component {
     handleSubmit = (event) => {
         event.preventDefault();
         const data = this.state;
-        console.log(data);
+        const city = {cityName: data.searchCity};
+        fetch('/api/weather', {
+            method: 'POST',
+            body: JSON.stringify(city),
+            headers: new Headers({
+                'Content-Type': 'application/json',
+            }),
+        })
+            .then(res => res.json())
+            .then(weatherJson => {
+                this.setState({weatherJson});
+                console.log(weatherJson);
+            })
+            .catch(err => console.error(err))
     }
 
     handleInputChange = (event) => {
