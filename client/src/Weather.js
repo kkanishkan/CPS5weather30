@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Card, Button, Form } from 'react-bootstrap';
+import { Card, Button, Form, Image } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Weather.css'
 
@@ -54,6 +54,7 @@ class Weather extends Component {
 
     render() {
         var weatherInfo = (this.state.weatherJson);
+        var imgUrl = "http://openweathermap.org/img/wn/" + weatherInfo.icon + "@2x.png";
         const {searchCity} = this.state;
         return (
             <div className="App mr-auto ml-auto">
@@ -68,6 +69,7 @@ class Weather extends Component {
                         <Card.Text>Conditions: {weatherInfo.description}</Card.Text>
                     </Card.Body>
                     </Card>
+                    <Image src={imgUrl} />
                 </div>
                 <div>
                     <Form onSubmit={this.handleSubmit}>

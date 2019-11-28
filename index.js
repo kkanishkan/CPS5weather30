@@ -31,7 +31,8 @@ app.get('/api/weather', (req,res) => {
             minTemp: weatherJson.main.temp_min, 
             maxTemp: weatherJson.main.temp_max, 
             description: weatherJson.weather[0].description,
-            city: weatherJson.name
+            city: weatherJson.name,
+            icon: weatherJson.weather[0].icon
         };
         res.send(weatherInfo);
     });
@@ -50,7 +51,8 @@ app.post('/api/weather', (req,res) => {
             minTemp: weatherJson.main.temp_min, 
             maxTemp: weatherJson.main.temp_max, 
             description: weatherJson.weather[0].description,
-            city: weatherJson.name
+            city: weatherJson.name,
+            icon: weatherJson.weather[0].icon
         };
         res.send(weatherInfo);
     });
