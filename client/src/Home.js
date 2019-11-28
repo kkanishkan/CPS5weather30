@@ -13,6 +13,11 @@ class Home extends Component {
                         Page 1
                     </button>
                 </Link>
+                <Link to={'./Page2'}>
+                    <button variant="raised">
+                        Page 2
+                    </button>
+                </Link>
                 
                 <Link to={'./Weather'}>
                     <button variant="raised">

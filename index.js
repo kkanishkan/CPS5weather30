@@ -22,23 +22,30 @@ app.get('/api/getList', (req,res) => {
 
 // Test openweather api endpoint
 app.get('/api/weather', (req,res) => {
-    var city = 'Toronto';
+    // const city = String(req.body.city);
+    var city = 'Brampton';
     var url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=9367d971696fc5955624feea1eaf11d7`;
     request(url, function(error,response,body) {
         // body has the json as a string
         // react doesn't seem to be able to handle the json well, shows properly when sent a string though
         let weatherJson = JSON.parse(body);
-        let weatherInfo = {temperature: weatherJson.main.temp, minTemp: weatherJson.main.temp_min, maxTemp: weatherJson.main.temp_max, description: weatherJson.weather[0].description};
+        let weatherInfo = {
+            temperature: weatherJson.main.temp, 
+            minTemp: weatherJson.main.temp_min, 
+            maxTemp: weatherJson.main.temp_max, 
+            description: weatherJson.weather[0].description,
+            city: weatherJson.name
+        };
         res.send(weatherInfo);
     });
 });
 
 // Test post openweather
-app.post('/submit-city', (req,res) => {
-    const city = String(req.body.city);
-    var url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=9367d971696fc5955624feea1eaf11d7`;
-    console.log("Hello")
-})
+// app.post('/submit-city', (req,res) => {
+//     const city = String(req.body.city);
+//     var url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=9367d971696fc5955624feea1eaf11d7`;
+//     console.log("Hello")
+// })
 
 // Handles any requests that don't match the ones above
 app.get('*', (req,res) => {
