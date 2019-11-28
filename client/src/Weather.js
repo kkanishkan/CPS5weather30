@@ -58,8 +58,8 @@ class Weather extends Component {
         const {searchCity} = this.state;
         return (
             <div className="App mr-auto ml-auto">
-                <div>
-                    <h1>Weather</h1>
+                <h1>Weather</h1>
+                <div className="WeatherCard mr-auto ml-auto">
                     <Card style={{ width: '18rem' }}>
                     <Card.Body>
                         <Card.Title>{weatherInfo.city}</Card.Title>
@@ -69,8 +69,8 @@ class Weather extends Component {
                         <Card.Text>Conditions: {weatherInfo.description}</Card.Text>
                     </Card.Body>
                     </Card>
-                    <Image src={imgUrl} />
                 </div>
+                <Image src={imgUrl} />
                 <div>
                     <Form onSubmit={this.handleSubmit}>
                         <Form.Group controlId="city">
