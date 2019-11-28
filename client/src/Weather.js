@@ -74,7 +74,7 @@ class Weather extends Component {
                 <div>
                     <Form onSubmit={this.handleSubmit}>
                         <Form.Group controlId="city">
-                            <Form.Control type="text" placeholder="Search for City" onChange={this.handleInputChange}/>
+                            <Form.Control type="text" placeholder="Search for a City" onChange={this.handleInputChange}/>
                         </Form.Group>
                         <Button variant="primary" type="submit">
                             Search
