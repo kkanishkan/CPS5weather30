@@ -45,16 +45,19 @@ app.post('/api/weather', (req,res) => {
     request(url, function(error,response,body) {
         // body has the json as a string
         // react doesn't seem to be able to handle the json well, shows properly when sent a string though
+        console.log(body);
         let weatherJson = JSON.parse(body);
-        let weatherInfo = {
-            temperature: weatherJson.main.temp, 
-            minTemp: weatherJson.main.temp_min, 
-            maxTemp: weatherJson.main.temp_max, 
-            description: weatherJson.weather[0].description,
-            city: weatherJson.name,
-            icon: weatherJson.weather[0].icon
-        };
-        res.send(weatherInfo);
+        if(weatherJson.cod != "404") {
+            let weatherInfo = {
+                temperature: weatherJson.main.temp, 
+                minTemp: weatherJson.main.temp_min, 
+                maxTemp: weatherJson.main.temp_max, 
+                description: weatherJson.weather[0].description,
+                city: weatherJson.name,
+                icon: weatherJson.weather[0].icon
+            };
+            res.send(weatherInfo);
+        }
     });
 })
 
