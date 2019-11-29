@@ -11,13 +11,6 @@ app.use(bodyParser());
 //Serve the static files from the React App
 app.use(express.static(path.join(__dirname, 'client/build')));
 
-//Api endpoint that returns a short list of items
-app.get('/api/getList', (req,res) => {
-    var list = ["item1", "item2", "item3"];
-    res.json(list);
-    console.log('Sent list of items');
-});
-
 // Test openweather api endpoint
 app.get('/api/weather', (req,res) => {
     var city = 'Toronto';
@@ -43,8 +36,6 @@ app.post('/api/weather', (req,res) => {
     var city = req.body.cityName;
     var url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=9367d971696fc5955624feea1eaf11d7`;
     request(url, function(error,response,body) {
-        // body has the json as a string
-        // react doesn't seem to be able to handle the json well, shows properly when sent a string though
         console.log(body);
         let weatherJson = JSON.parse(body);
         if(weatherJson.cod != "404") {

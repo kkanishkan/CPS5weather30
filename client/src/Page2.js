@@ -12,7 +12,6 @@ class Page2 extends Component {
   render() {
     const Installations = () => (
       <div>
-        
         <ol>
           <li>Install NodeJs from https://nodejs.org/en/download/</li>
           <p>Type the following commands in Command Line/Terminal.</p>

@@ -55,7 +55,6 @@ class Weather extends Component {
     render() {
         var weatherInfo = (this.state.weatherJson);
         var imgUrl = "http://openweathermap.org/img/wn/" + weatherInfo.icon + "@2x.png";
-        const {searchCity} = this.state;
         return (
             <div className="App mr-auto ml-auto">
                 <h1>Weather</h1>

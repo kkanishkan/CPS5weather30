@@ -18,7 +18,11 @@ class Home extends Component {
                         Page 2
                     </button>
                 </Link>
-                
+                <Link to={'./Page3'}>
+                    <button variant="raised">
+                        Page 3
+                    </button>
+                </Link>
                 <Link to={'./Weather'}>
                     <button variant="raised">
                         The Weather
