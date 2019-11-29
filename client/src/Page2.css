@@ -1,8 +1,10 @@
 body{
   background-color: rgb(217, 219, 228);
-  /* text-align: center; */
+  /* text-align: left; */
 }
-
+#align{
+  text-align: left;
+}
 h3{
   text-align: center;
 }
