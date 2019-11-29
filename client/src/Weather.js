@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Card, Button, Form, Image } from 'react-bootstrap';
+import { Card, Button, Form, Image, Navbar, Nav } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Weather.css'
 
@@ -55,30 +55,52 @@ class Weather extends Component {
     render() {
         var weatherInfo = (this.state.weatherJson);
         var imgUrl = "http://openweathermap.org/img/wn/" + weatherInfo.icon + "@2x.png";
+
+        const NavBar = () => (
+            <div>
+              <Navbar bg="light" expand="lg">
+              <Navbar.Brand href="#home">5Weather30</Navbar.Brand>
+              <Navbar.Toggle aria-controls="basic-navbar-nav" />
+              <Navbar.Collapse id="basic-navbar-nav">
+                <Nav className="mr-auto">
+                  <Nav.Link href="./Page1">Page1</Nav.Link>
+                  <Nav.Link href="./Page2">Page2</Nav.Link>
+                  <Nav.Link href="./Page3">Page3</Nav.Link>
+                  <Nav.Link href="./Weather">Weather App</Nav.Link>
+                </Nav>
+                <img  style={{height:"50px"}} src="https://i.pinimg.com/originals/06/c4/f7/06c4f70ec5931e2342e703e8a3f0a253.png"></img>
+              </Navbar.Collapse>
+            </Navbar>
+            </div>
+          );
+
         return (
             <div className="App mr-auto ml-auto">
-                <h1>Weather</h1>
-                <div className="WeatherCard mr-auto ml-auto">
-                    <Card style={{ width: '18rem' }}>
-                    <Card.Body>
-                        <Card.Title>{weatherInfo.city}</Card.Title>
-                        <Card.Text>Current: {Math.round(weatherInfo.temperature)}</Card.Text>
-                        <Card.Text>Min: {Math.round(weatherInfo.minTemp)}</Card.Text>
-                        <Card.Text>Max: {Math.round(weatherInfo.maxTemp)}</Card.Text>
-                        <Card.Text>Conditions: {weatherInfo.description}</Card.Text>
-                    </Card.Body>
-                    </Card>
-                </div>
-                <Image src={imgUrl} />
+                <NavBar/>
                 <div>
-                    <Form onSubmit={this.handleSubmit}>
-                        <Form.Group controlId="city">
-                            <Form.Control type="text" placeholder="Search for a City" onChange={this.handleInputChange}/>
-                        </Form.Group>
-                        <Button variant="primary" type="submit">
-                            Search
-                        </Button>
-                    </Form>
+                    <h1>Weather</h1>
+                    <div className="WeatherCard mr-auto ml-auto">
+                        <Card style={{ width: '18rem' }}>
+                        <Card.Body>
+                            <Card.Title>{weatherInfo.city}</Card.Title>
+                            <Card.Text>Current: {Math.round(weatherInfo.temperature)}</Card.Text>
+                            <Card.Text>Min: {Math.round(weatherInfo.minTemp)}</Card.Text>
+                            <Card.Text>Max: {Math.round(weatherInfo.maxTemp)}</Card.Text>
+                            <Card.Text>Conditions: {weatherInfo.description}</Card.Text>
+                        </Card.Body>
+                        </Card>
+                    </div>
+                    <Image src={imgUrl} />
+                    <div>
+                        <Form onSubmit={this.handleSubmit}>
+                            <Form.Group controlId="city">
+                                <Form.Control type="text" placeholder="Search for a City" onChange={this.handleInputChange}/>
+                            </Form.Group>
+                            <Button variant="primary" type="submit">
+                                Search
+                            </Button>
+                        </Form>
+                    </div>
                 </div>
             </div>
         )
