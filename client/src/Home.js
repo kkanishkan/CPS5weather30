@@ -47,6 +47,12 @@ class Home extends Component {
                         The Weather
                     </button>
                 </Link>
+                <Link to={'./Conclusion'}>
+                    <button variant="raised">
+                        Conclusion
+                    </button>
+                </Link>
+
             </div>
         )
     }
