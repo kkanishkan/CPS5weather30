@@ -7,13 +7,16 @@ import img1 from './img/Capture1.PNG';
 import img2 from './img/Capture2.PNG';
 import img3 from './img/Capture3.PNG';
 import img4 from './img/Capture4.PNG';
+import img5 from './img/Capture5.PNG';
+import img6 from './img/Capture6.PNG';
 
 class Page2 extends Component {
   render() {
-    const Installations = () => (
-      <div>
+    const InstallationReact = () => (
+      <div id="align">
+        <h4>Steps for installing React</h4>
         <ol>
-          <li>Install NodeJs from https://nodejs.org/en/download/</li>
+          <li>Install NodeJs from <code>https://nodejs.org/en/download/</code></li>
           <p>Type the following commands in Command Line/Terminal.</p>
           <li><code>$ (sudo) npm i -g create-react-app@1.5.2</code></li> 
           <li><code>$ create-react-app react-app</code></li>
@@ -25,7 +28,22 @@ class Page2 extends Component {
       </div>
     );
 
-    const SlideShow = () => (
+    const InstallationExpress = () => (
+      <div id="align">
+        <h4>Steps for installing Express</h4>
+        <ol>
+          <li>First need to start off by installing express generator. Simply type in <code>‘sudo npm install -g express-generator’</code> (for windows you do not need to include sudo).</li>
+          <li>Go into the text editor of your choice and identify the express generator by typing in express and the name of the file into the root folder. </li> 
+          <li>By doing this, it creates all the folders and files that you need during the duration of your project. </li>
+          <li>Inside the folder, we type in<code>‘npm install’</code>  and this creates a node modules that holds all of the dependencies needed for the project. You can access these modules through the text editor. </li>
+          <li>To start the server, you type in<code> ‘npm start’</code> into the main project folder’s terminal. </li>
+        </ol>
+        <h3>Now the server is fired up, time for you to write some code!</h3>
+        <hr></hr>
+      </div>
+    );
+
+    const SlideShowReact = () => (
       <div className="row">
         <Carousel className="w-50 h-25 mr-auto ml-auto">
   <Carousel.Item >
@@ -92,6 +110,37 @@ class Page2 extends Component {
       </div>
     );
 
+
+    const SlideShowExpress = () => (
+      <div className="row">
+        <Carousel className="w-50 h-25 mr-auto ml-auto">
+  <Carousel.Item >
+    <Image fluid
+      className="d-block w-100 h-100"
+      src={img5}
+      alt="First slide"
+    />
+    <Carousel.Caption>
+      <h3 id="first">Step #1</h3>
+    </Carousel.Caption>
+  </Carousel.Item>
+  <Carousel.Item>
+    <Image fluid
+      className="d-block w-100 h-100"
+      src={img6}
+      alt="Second slide"
+    />
+
+    <Carousel.Caption>
+      <h3>Step #4</h3>
+    </Carousel.Caption>
+  </Carousel.Item>
+
+  
+</Carousel>
+      </div>
+    );
+
     const NavBar = () => (
       <div>
         <Navbar bg="light" expand="lg">
@@ -110,13 +159,19 @@ class Page2 extends Component {
       </div>
     );
 
+    
+
 
     return (
       <div>
         <NavBar/>
         <div>
-          <Installations/>
-          <SlideShow/>
+          <InstallationReact/>
+          <SlideShowReact/>
+          <br></br>
+          <hr></hr>
+          <InstallationExpress/>
+          <SlideShowExpress/>
         </div>
       </div>
     )
