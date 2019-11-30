@@ -48,7 +48,7 @@ class Page3 extends Component {
                             </Card.Header>
                             <Accordion.Collapse eventKey="0">
                                 <Card.Body className="ccard">
-                                    <p>Part 1: We first signed up for an account on https://openweathermap.org/api to get an API key.</p>
+                                    <p><b>Part 1:</b> We first signed up for an account on https://openweathermap.org/api to get an API key.</p>
                                     <p>The API key allows us to access the JSON they provide with current weather conditions in a given city.</p>
                                     <p>Using the URL we can replace the portion (the Toronto part) of the URL with the city we want to search for.</p>
                                     <code>http://api.openweathermap.org/data/2.5/weather?q=$Toronto&units=metric&appid=9367d971696fc5955624feea1eaf11d7</code>
@@ -67,7 +67,7 @@ class Page3 extends Component {
                             </Card.Header>
                             <Accordion.Collapse eventKey="0">
                                 <Card.Body className="ccard">
-                                    <p>Part 2: Our backend is Express.JS, it will handle our API requests and package the elements of the JSON OpenWeatherMap provides.</p>
+                                    <p><b>Part 2:</b> Our backend is Express.JS, it will handle our API requests and package the elements of the JSON OpenWeatherMap provides.</p>
                                     <p>We are using two methods to handle the API requests, one default one we use when the page loads for the first time, and the other when the user searches for a specific city.</p>
                                     <p>Method 1</p>
                                     <code>app.get('api/weather', (req,res))</code>
@@ -93,7 +93,7 @@ class Page3 extends Component {
                             </Card.Header>
                             <Accordion.Collapse eventKey="0">
                                 <Card.Body className="ccard">
-                                    <p>Part 3: ReactJS handles all of our front end.</p>
+                                    <p><b>Part 3:</b>ReactJS handles all of our front end.</p>
                                     <p>We handle all of our page routing in React.</p>
                                     <p>In terms of design, we used a bootstrap package called "react-bootstrap" to easily input bootstrap similarily to html.</p>
                                     <p>The rest of the pages are made very similarily to stock HTML.</p>
