@@ -1,14 +1,13 @@
 import React, {Component} from 'react';
 import './Conclusion.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {Card, Navbar, Nav} from "react-bootstrap";
+import {Card, Navbar, Nav, Dropdown} from "react-bootstrap";
 import img from "./img/Capture.PNG";
 
 
 class Conclusion extends Component {
 
     render() {
-
         const NavBar = () => (
             <div>
                 <Navbar bg="light" expand="lg">
@@ -19,11 +18,20 @@ class Conclusion extends Component {
                             <Nav.Link href="./Page1">Page1</Nav.Link>
                             <Nav.Link href="./Page2">Page2</Nav.Link>
                             <Nav.Link href="./Page3">Page3</Nav.Link>
-                            {/* <Nav.Link href="./Weather">Weather App</Nav.Link> */}
-                            <Nav.Link href="./Conclusion">Conclusion</Nav.Link>
+                            <Dropdown>
+                                <Dropdown.Toggle variant="none" id="dropdown-basic">
+                                    Devs
+                                </Dropdown.Toggle>
+                                <Dropdown.Menu>
+                                    <Dropdown.Item href="./Conclusion">Conclusions</Dropdown.Item>
+                                    <Dropdown.Item href="./Credits">Credits</Dropdown.Item>
+                                    <Dropdown.Item href="./References">References</Dropdown.Item>
+                                </Dropdown.Menu>
+                            </Dropdown>
                         </Nav>
                         <img style={{height: "50px"}}
-                             src="https://i.pinimg.com/originals/06/c4/f7/06c4f70ec5931e2342e703e8a3f0a253.png"></img>
+                             src="https://i.pinimg.com/originals/06/c4/f7/06c4f70ec5931e2342e703e8a3f0a253.png"
+                             alt="logo"></img>
                     </Navbar.Collapse>
                 </Navbar>
             </div>
@@ -32,7 +40,7 @@ class Conclusion extends Component {
         return (
             <div className="conclusion">
                 <NavBar/>
-                <h1>Frameworks Used</h1>
+                <h1>Conclusions</h1>
                 <Card className="ccard mb-3">
                     <Card.Body>
                         <Card.Title>Kanishkan Kukarajah</Card.Title>

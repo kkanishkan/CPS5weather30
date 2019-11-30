@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Card, Button, Form, Image, Navbar, Nav } from 'react-bootstrap';
+import { Card, Button, Form, Image, Navbar, Nav, Dropdown } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Weather.css'
 
@@ -58,22 +58,32 @@ class Home extends Component {
 
         const NavBar = () => (
             <div>
-              <Navbar bg="light" expand="lg">
-              <Navbar.Brand href="./">5Weather30</Navbar.Brand>
-              <Navbar.Toggle aria-controls="basic-navbar-nav" />
-              <Navbar.Collapse id="basic-navbar-nav">
-                <Nav className="mr-auto">
-                  <Nav.Link href="./Page1">Page1</Nav.Link>
-                  <Nav.Link href="./Page2">Page2</Nav.Link>
-                  <Nav.Link href="./Page3">Page3</Nav.Link>
-                  <Nav.Link href="./Conclusion">Conclusion</Nav.Link>
-                  {/* <Nav.Link href="./Weather">Weather App</Nav.Link> */}
-                </Nav>
-                <img  style={{height:"50px"}} src="https://i.pinimg.com/originals/06/c4/f7/06c4f70ec5931e2342e703e8a3f0a253.png"></img>
-              </Navbar.Collapse>
-            </Navbar>
+                <Navbar bg="light" expand="lg">
+                    <Navbar.Brand href="./">5Weather30</Navbar.Brand>
+                    <Navbar.Toggle aria-controls="basic-navbar-nav"/>
+                    <Navbar.Collapse id="basic-navbar-nav">
+                        <Nav className="mr-auto">
+                            <Nav.Link href="./Page1">Page1</Nav.Link>
+                            <Nav.Link href="./Page2">Page2</Nav.Link>
+                            <Nav.Link href="./Page3">Page3</Nav.Link>
+                            <Dropdown>
+                                <Dropdown.Toggle variant="none" id="dropdown-basic">
+                                    Devs
+                                </Dropdown.Toggle>
+                                <Dropdown.Menu>
+                                    <Dropdown.Item href="./Conclusion">Conclusions</Dropdown.Item>
+                                    <Dropdown.Item href="./Credits">Credits</Dropdown.Item>
+                                    <Dropdown.Item href="./References">References</Dropdown.Item>
+                                </Dropdown.Menu>
+                            </Dropdown>
+                        </Nav>
+                        <img style={{height: "50px"}}
+                             src="https://i.pinimg.com/originals/06/c4/f7/06c4f70ec5931e2342e703e8a3f0a253.png"
+                             alt="logo"></img>
+                    </Navbar.Collapse>
+                </Navbar>
             </div>
-          );
+        );
 
         return (
             <div className = "App">

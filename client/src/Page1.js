@@ -1,31 +1,42 @@
 import React, { Component } from 'react';
 import './Page1.css';
-import { Navbar, Nav } from "react-bootstrap";
+import { Navbar, Nav, Dropdown } from "react-bootstrap";
 
 
 class Page1 extends Component {
   render() {
     const NavBar = () => (
-            <div>
-              <Navbar bg="light" expand="lg">
+      <div>
+          <Navbar bg="light" expand="lg">
               <Navbar.Brand href="./">5Weather30</Navbar.Brand>
-              <Navbar.Toggle aria-controls="basic-navbar-nav" />
+              <Navbar.Toggle aria-controls="basic-navbar-nav"/>
               <Navbar.Collapse id="basic-navbar-nav">
-                <Nav className="mr-auto">
-                  <Nav.Link href="./Page1">Page1</Nav.Link>
-                  <Nav.Link href="./Page2">Page2</Nav.Link>
-                  <Nav.Link href="./Page3">Page3</Nav.Link>
-                  <Nav.Link href="./Conclusion">Conclusion</Nav.Link>
-                  {/* <Nav.Link href="./Weather">Weather App</Nav.Link> */}
-                </Nav>
-                <img  style={{height:"50px"}} src="https://i.pinimg.com/originals/06/c4/f7/06c4f70ec5931e2342e703e8a3f0a253.png"></img>
+                  <Nav className="mr-auto">
+                      <Nav.Link href="./Page1">Page1</Nav.Link>
+                      <Nav.Link href="./Page2">Page2</Nav.Link>
+                      <Nav.Link href="./Page3">Page3</Nav.Link>
+                      <Dropdown>
+                          <Dropdown.Toggle variant="none" id="dropdown-basic">
+                              Devs
+                          </Dropdown.Toggle>
+                          <Dropdown.Menu>
+                              <Dropdown.Item href="./Conclusion">Conclusions</Dropdown.Item>
+                              <Dropdown.Item href="./Credits">Credits</Dropdown.Item>
+                              <Dropdown.Item href="./References">References</Dropdown.Item>
+                          </Dropdown.Menu>
+                      </Dropdown>
+                  </Nav>
+                  <img style={{height: "50px"}}
+                       src="https://i.pinimg.com/originals/06/c4/f7/06c4f70ec5931e2342e703e8a3f0a253.png"
+                       alt="logo"></img>
               </Navbar.Collapse>
-            </Navbar>
-            </div>
-          );
+          </Navbar>
+      </div>
+    );
+
     const ReactParagraph = () => (
       <div>
-        <h1>Welcome To React Tutorial</h1>
+        <h1>Welcome To React</h1>
       <h4>(A JavaScript library for building user interfaces)</h4>
       <img src="https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png" alt="React Logo"></img>
 
@@ -74,7 +85,7 @@ class Page1 extends Component {
 
     const ExpressParagraph = () => (
       <div>
-        <h1>Welcome To Express Tutorial</h1>
+        <h1>Welcome To Express</h1>
         <h4>(Fast, unopinionated, minimalist web framework for Node.js)</h4>
       <img src="https://buttercms.com/static/images/tech_banners/ExpressJS.png" alt="Express Logo"></img>
         <h3>What is Express?</h3>
