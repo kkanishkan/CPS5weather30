@@ -14,7 +14,7 @@ class App extends Component {
       <div>
         <Switch>
           <Route exact path='/' component={Home}/>
-          <Route path='/weather' component={Weather}/>
+          {/* <Route path='/weather' component={Weather}/> */}
           <Route path='/page1' component={Page1}/>
           <Route path='/page2' component={Page2}/>
           <Route path='/page3' component={Page3}/>

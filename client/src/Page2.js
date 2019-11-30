@@ -144,14 +144,15 @@ class Page2 extends Component {
     const NavBar = () => (
       <div>
         <Navbar bg="light" expand="lg">
-        <Navbar.Brand href="#home">5Weather30</Navbar.Brand>
+        <Navbar.Brand href="./">5Weather30</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
             <Nav.Link href="./Page1">Page1</Nav.Link>
             <Nav.Link href="./Page2">Page2</Nav.Link>
             <Nav.Link href="./Page3">Page3</Nav.Link>
-            <Nav.Link href="./Weather">Weather App</Nav.Link>
+            <Nav.Link href="./Conclusion">Conclusion</Nav.Link>
+            {/* <Nav.Link href="./Weather">Weather App</Nav.Link> */}
           </Nav>
           <img  style={{height:"50px"}} src="https://i.pinimg.com/originals/06/c4/f7/06c4f70ec5931e2342e703e8a3f0a253.png"></img>
         </Navbar.Collapse>

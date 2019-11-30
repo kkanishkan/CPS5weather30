@@ -12,14 +12,14 @@ class Conclusion extends Component {
         const NavBar = () => (
             <div>
                 <Navbar bg="light" expand="lg">
-                    <Navbar.Brand href="/">5Weather30</Navbar.Brand>
+                    <Navbar.Brand href="./">5Weather30</Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav"/>
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="mr-auto">
                             <Nav.Link href="./Page1">Page1</Nav.Link>
                             <Nav.Link href="./Page2">Page2</Nav.Link>
                             <Nav.Link href="./Page3">Page3</Nav.Link>
-                            <Nav.Link href="./Weather">Weather App</Nav.Link>
+                            {/* <Nav.Link href="./Weather">Weather App</Nav.Link> */}
                             <Nav.Link href="./Conclusion">Conclusion</Nav.Link>
                         </Nav>
                         <img style={{height: "50px"}}
@@ -33,7 +33,7 @@ class Conclusion extends Component {
             <div className="conclusion">
                 <NavBar/>
                 <h1>Frameworks Used</h1>
-                <Card className="mb-3">
+                <Card className="ccard mb-3">
                     <Card.Body>
                         <Card.Title>Kanishkan Kukarajah</Card.Title>
                         <Card.Subtitle className="mb-2 text-muted">500723832</Card.Subtitle>
@@ -50,7 +50,7 @@ class Conclusion extends Component {
                         </Card.Text>
                     </Card.Body>
                 </Card>
-                <Card className="mb-3">
+                <Card className="ccard mb-3">
                     <Card.Body>
                         <Card.Title>Andy Ho</Card.Title>
                         <Card.Subtitle className="mb-2 text-muted"> 500754624</Card.Subtitle>
@@ -80,7 +80,7 @@ class Conclusion extends Component {
                         </Card.Text>
                     </Card.Body>
                 </Card>
-                <Card className="mb-3">
+                <Card className="ccard mb-3">
                     <Card.Body>
                         <Card.Title>Mohamed Elbadry</Card.Title>
                         <Card.Subtitle className="mb-2 text-muted">500860249</Card.Subtitle>
@@ -107,7 +107,7 @@ class Conclusion extends Component {
                         </Card.Text>
                     </Card.Body>
                 </Card>
-                <Card className="mb-3">
+                <Card className="ccard mb-3">
                     <Card.Body>
                         <Card.Title>Avneet Jaswal</Card.Title>
                         <Card.Subtitle className="mb-2 text-muted">500838517</Card.Subtitle>
@@ -127,7 +127,7 @@ class Conclusion extends Component {
                         </Card.Text>
                     </Card.Body>
                 </Card>
-                <Card className="mb-3">
+                <Card className="ccard mb-3">
                     <Card.Body>
                         <Card.Title>Ishak Ahmed</Card.Title>
                         <Card.Subtitle className="mb-2 text-muted">500576186</Card.Subtitle>

@@ -14,14 +14,15 @@ class Page3 extends Component {
         const NavBar = () => (
             <div>
               <Navbar bg="light" expand="lg">
-              <Navbar.Brand href="#home">5Weather30</Navbar.Brand>
+              <Navbar.Brand href="./">5Weather30</Navbar.Brand>
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto">
                   <Nav.Link href="./Page1">Page1</Nav.Link>
                   <Nav.Link href="./Page2">Page2</Nav.Link>
                   <Nav.Link href="./Page3">Page3</Nav.Link>
-                  <Nav.Link href="./Weather">Weather App</Nav.Link>
+                  <Nav.Link href="./Conclusion">Conclusion</Nav.Link>
+                  {/* <Nav.Link href="./Weather">Weather App</Nav.Link> */}
                 </Nav>
                 <img  style={{height:"50px"}} src="https://i.pinimg.com/originals/06/c4/f7/06c4f70ec5931e2342e703e8a3f0a253.png"></img>
               </Navbar.Collapse>
@@ -46,7 +47,7 @@ class Page3 extends Component {
                                 </Accordion.Toggle>
                             </Card.Header>
                             <Accordion.Collapse eventKey="0">
-                                <Card.Body>
+                                <Card.Body className="ccard">
                                     <p>Part 1: We first signed up for an account on https://openweathermap.org/api to get an API key.</p>
                                     <p>The API key allows us to access the JSON they provide with current weather conditions in a given city.</p>
                                     <p>Using the URL we can replace the portion (the Toronto part) of the URL with the city we want to search for.</p>
@@ -65,7 +66,7 @@ class Page3 extends Component {
                                 </Accordion.Toggle>
                             </Card.Header>
                             <Accordion.Collapse eventKey="0">
-                                <Card.Body>
+                                <Card.Body className="ccard">
                                     <p>Part 2: Our backend is Express.JS, it will handle our API requests and package the elements of the JSON OpenWeatherMap provides.</p>
                                     <p>We are using two methods to handle the API requests, one default one we use when the page loads for the first time, and the other when the user searches for a specific city.</p>
                                     <p>Method 1</p>
@@ -91,7 +92,7 @@ class Page3 extends Component {
                                 </Accordion.Toggle>
                             </Card.Header>
                             <Accordion.Collapse eventKey="0">
-                                <Card.Body>
+                                <Card.Body className="ccard">
                                     <p>Part 3: ReactJS handles all of our front end.</p>
                                     <p>We handle all of our page routing in React.</p>
                                     <p>In terms of design, we used a bootstrap package called "react-bootstrap" to easily input bootstrap similarily to html.</p>
