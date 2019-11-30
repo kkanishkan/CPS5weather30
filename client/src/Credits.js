@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {Image, Navbar, Nav, Dropdown} from "react-bootstrap";
 
 import Kanishkan from './img/kanishkan.jpg'
-import Mo from './img/mo.jpg';
+import Mo from './img/Mo.jpg';
 import Andy from './img/andy.jpg';
 import Ishak from './img/ishak.jpg';
 import Avneet from './img/ishak.jpg';
