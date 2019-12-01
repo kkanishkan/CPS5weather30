@@ -141,13 +141,33 @@ class Conclusion extends Component {
                         <Card.Subtitle className="mb-2 text-muted">500576186</Card.Subtitle>
                         <Card.Text>
                             <p>
-                                XYZ
+                                {/* TODO - Rate your experience with the frameworks that you chose. */}
+                                <p>
+                                    This project's open-endedness granted me the opportunity to practice using a new
+                                    backend, and frontend framework (i.e. <span
+                                    className={'code'}>express</span> and <span className={'code'}>react</span>). Using
+                                    these tools involved learning new philosophies and approaches to web development
+                                    (and even mobile development). Initially, I expected to face many issues during the
+                                    setup and configuration phase, but the process was simple. Using <span
+                                    className={'code'}>react</span>, and <span className={'code'}>react-bootstrap</span> made
+                                    the process (of creating web pages) even easier by allowing us to reference
+                                    components (in our JSX) instead of manually writing the HTML.
+                                </p>
+                                <p>
+                                    All in all, learning <span className={'code'}>express</span>, <span
+                                    className={'code'}>react</span> etc. has been a rewarding experience; I definitely
+                                    plan on spending more time with these tools and using them in future projects.
+                                </p>
+                                {/* TODO - Did they perform to your expectations?*/}
+                                {/* TODO - Was it easy to create the page(s) with it?*/}
+                                {/* TODO - Would you have done things differently in retrospect?*/}
+
                             </p>
                         </Card.Text>
                     </Card.Body>
                 </Card>
             </div>
-        )
+        );
     }
 
 }

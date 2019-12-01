@@ -8,3 +8,11 @@
     text-align: left;
     margin: auto;
 }
+
+.code {
+    font-family: monospace;
+    background-color: #f7f8ff;
+    padding: 3px 5px;
+    border: 1px solid #e3e4f1;
+    border-radius: 5px;
+}
