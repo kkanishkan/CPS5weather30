@@ -14,6 +14,7 @@ class Page2 extends Component {
   render() {
     const InstallationReact = () => (
       <div id="align">
+        <br/>
         <h4>Steps for installing React</h4>
         <ol>
           <li>Install NodeJs from <code>https://nodejs.org/en/download/</code></li>

@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
 // import './Page2.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Button, Card, Accordion, Navbar, Nav, Dropdown } from "react-bootstrap";
+import { Button, Card, Accordion, Navbar, Nav, Dropdown, Carousel, Image } from "react-bootstrap";
+import API from './img/api.png';
+import GetExpress from './img/getExpress.png';
+import PostExpress from './img/postExpress.png';
+import React1 from './img/react1.png';
+import React2 from './img/react2.png';
 
 class Page3 extends Component {
     render() {
@@ -57,6 +62,10 @@ class Page3 extends Component {
                                     <p>The API key allows us to access the JSON they provide with current weather conditions in a given city.</p>
                                     <p>Using the URL we can replace the portion (the Toronto part) of the URL with the city we want to search for.</p>
                                     <code>http://api.openweathermap.org/data/2.5/weather?q=$Toronto&units=metric&appid=9367d971696fc5955624feea1eaf11d7</code>
+                                    <br/>
+                                    <br/>
+                                    <Image fluid className="d-block" src={API} alt="API"/>
+                                    <p><b>OpenWeatherMap API Doc and returning JSON</b></p>
                                 </Card.Body>
                             </Accordion.Collapse>
                         </Card>
@@ -78,11 +87,18 @@ class Page3 extends Component {
                                     <code>app.get('api/weather', (req,res))</code>
                                     <p>This fetches the weather information for Toronto using the same url as shown before.</p>
                                     <p>It grabs the JSON from the site and extracts the current temperature, daily low, daily high, weather condition description, and the image associated with it.</p>
+                                    <br/>
+                                    <Image fluid className="d-block" src={GetExpress} alt="Get Call"/>
+                                    <p><b>The get call runs when the user first loads the home page</b></p>
+                                    <br/>
                                     <p>Method 2</p>
                                     <code>app.post('api/weather', (req,res))</code>
                                     <p>This methods works similarily to the previous with the only difference being that it takes user input and sends it along.</p>
                                     <p>It fetches the weather information based on the city the user enters.</p>
                                     <p>If the user enters a nonexistent city or makes a spelling mistake it will not fetch anything.</p>
+                                    <br/>
+                                    <Image fluid className="d-block" src={PostExpress} alt="Post Call"/>
+                                    <p><b>The post call when user searches for a city</b></p>
                                 </Card.Body>
                             </Accordion.Collapse>
                         </Card>
@@ -102,6 +118,12 @@ class Page3 extends Component {
                                     <p>We handle all of our page routing in React.</p>
                                     <p>In terms of design, we used a bootstrap package called "react-bootstrap" to easily input bootstrap similarily to html.</p>
                                     <p>The rest of the pages are made very similarily to stock HTML.</p>
+                                    <br/>
+                                    <Image fluid className="d-block" src={React1} alt="Post Call"/>
+                                    <p><b>The Navigation at the top of every page</b></p>
+                                    <br/>
+                                    <Image fluid className="d-block" src={React2} alt="Post Call"/>
+                                    <p><b>The Routing for all of the pages</b></p>
                                 </Card.Body>
                             </Accordion.Collapse>
                         </Card>
