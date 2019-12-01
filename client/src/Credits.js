@@ -6,7 +6,7 @@ import Kanishkan from './img/kanishkan.jpg'
 import Mo from './img/Mo.jpg';
 import Andy from './img/andy.jpg';
 import Ishak from './img/ishak.jpg';
-import Avneet from './img/ishak.jpg';
+import Avneet from './img/avneet.jpg';
 
 class Credits extends Component {
 
