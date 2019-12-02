@@ -17,12 +17,12 @@ class Page2 extends Component {
         <br/>
         <h4>Steps for installing React</h4>
         <ol>
-          <li>Install NodeJs from <code>https://nodejs.org/en/download/</code></li>
+          <li>Install NodeJs from <code className="code">https://nodejs.org/en/download/</code></li>
           <p>Type the following commands in Command Line/Terminal.</p>
-          <li><code>$ (sudo) npm i -g create-react-app@1.5.2</code></li> 
-          <li><code>$ create-react-app react-app</code></li>
-          <li><code>$cd react-app/</code></li>
-          <li><code>$npm start</code></li>
+          <li><code className="code">$ (sudo) npm i -g create-react-app@1.5.2</code></li> 
+          <li><code className="code">$ create-react-app react-app</code></li>
+          <li><code className="code">$cd react-app/</code></li>
+          <li><code className="code">$npm start</code></li>
         </ol>
         <hr></hr>
       </div>
@@ -32,11 +32,11 @@ class Page2 extends Component {
       <div id="align">
         <h4>Steps for installing Express</h4>
         <ol>
-          <li>First need to start off by installing express generator. Simply type in <code>‘sudo npm install -g express-generator’</code> (for windows you do not need to include sudo).</li>
+          <li>First need to start off by installing express generator. Simply type in <code className="code">‘sudo npm install -g express-generator’</code> (for windows you do not need to include sudo).</li>
           <li>Go into the text editor of your choice and identify the express generator by typing in express and the name of the file into the root folder. </li> 
           <li>By doing this, it creates all the folders and files that you need during the duration of your project. </li>
-          <li>Inside the folder, we type in<code>‘npm install’</code>  and this creates a node modules that holds all of the dependencies needed for the project. You can access these modules through the text editor. </li>
-          <li>To start the server, you type in<code> ‘npm start’</code> into the main project folder’s terminal. </li>
+          <li>Inside the folder, we type in<code className="code">‘npm install’</code>  and this creates a node modules that holds all of the dependencies needed for the project. You can access these modules through the text editor. </li>
+          <li>To start the server, you type in<code className="code"> ‘npm start’</code> into the main project folder’s terminal. </li>
         </ol>
         <h3>Now the server is fired up, time for you to write some code!</h3>
         <hr></hr>
